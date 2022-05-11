@@ -17,7 +17,7 @@ function logAndExecute() {
     done
     echo $DIVIDER | tee -a $OUTPUT_FILENAME
     echo $1 | tee -a $OUTPUT_FILENAME
-    $2 | tee -a $OUTPUT_FILENAME
+    eval $2 | tee -a $OUTPUT_FILENAME
 }
 
 
@@ -27,5 +27,5 @@ logAndExecute "System version:" "uname -r"
 logAndExecute "Network" "ifconfig"
 logAndExecute "/etc/resolv.conf" "cat /etc/resolv.conf"
 logAndExecute "ip link:" "ip link"
-logAndExecute "Firewall configuration:" "usw status"
+logAndExecute "Firewall configuration:" "ufw status"
 logAndExecute "modprobe.conf" "cat /etc/modprobe.conf"

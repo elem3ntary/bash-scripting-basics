@@ -17,7 +17,7 @@ function logAndExecute() {
     done
     echo $DIVIDER | tee -a $OUTPUT_FILENAME
     echo $1 | tee -a $OUTPUT_FILENAME
-    $2 | tee -a $OUTPUT_FILENAME
+    eval $2 | tee -a $OUTPUT_FILENAME
 }
 
 

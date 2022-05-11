@@ -1,5 +1,6 @@
 # BASH-Scripting
 ## Usage
+Set permission to execute for desired user / group beforehand
 ```bash
 ./process_runner.sh <process_name> <arg1> <arg2> ...
 ./system_report_1.sh <filename>
